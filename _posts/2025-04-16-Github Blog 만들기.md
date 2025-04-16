@@ -127,3 +127,7 @@ husky - commit-msg script failed (code 1)
 ```
 
 명령어로 커밋 메세지 검사를 비활성화할 수 있다.
+
+**\*Gti Actions 에서 내가 커밋한 이름이 초록색 떠야 정상이다.**
+ > 링크가 https 가 아닌 http 인 경우 오류가 날 수 있다.
+ > https 로 변경하거나 삭제하면 정상 처리 된다.
