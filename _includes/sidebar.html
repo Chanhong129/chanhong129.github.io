@@ -65,8 +65,10 @@
         {% when 'rss' %}
           {% assign url = '/feed.xml' | relative_url %}
 		{% when 'tistory' %}
-			{% captrue url %}
-				{% site[tistory].url %}
+			{% capture url %}
+  {{ site.tistory.url }}
+{% endcapture %}
+
         {% else %}
           {% assign url = entry.url %}
       {% endcase %}
