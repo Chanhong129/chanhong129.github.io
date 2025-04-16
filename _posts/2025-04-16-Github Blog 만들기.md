@@ -105,3 +105,20 @@ git push -u origin +master
 ```
 
 이후 git repository 에 Setting - Pages 에서 Visist site 로 방문하면 내가 만든 Github Blog 에 접속 가능!
+
+**\* Git commit error message 발생 시**
+```
+$ git commit -m 'first post'
+⧗   input: first post
+✖   subject may not be empty [subject-empty]
+✖   type may not be empty [type-empty]
+
+✖   found 2 problems, 0 warnings
+ⓘ   Get help: https://github.com/conventional-changelog/commitlint/#what-is-commitlint
+
+husky - commit-msg script failed (code 1)
+```
+
+> rm .husky/commit-msg
+
+를 이용해서 커밋 규칙을 삭제한다.
