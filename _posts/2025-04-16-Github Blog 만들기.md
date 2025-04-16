@@ -6,6 +6,8 @@ Github Blog 를 제작하기 위해서 첫 번째로 해야 할일은 블로그 
 
 [http://jekyllthemes.org/](http://jekyllthemes.org/) 에 들어가면 여러가지 블로그 테마를 구경할 수 있다. 
 
+![jekyll themes](https://i.ibb.co/jvmZYYgH/image.png)
+
 다양한 스타일이 있어서 고르는 재미가 쏠쏠했다.
 
 그 중에서 나는 Chirpy 테마가 가장 마음에 들어서 선택했다.
@@ -53,7 +55,7 @@ ruby 3.3.8 (2025-04-09 revision b200bad6cd) [x64-mingw-ucrt]
 > gem install jekyll
 > gen install bundler
 ```
-```
+```shell
 > jekyll -v
 > bundler -v
 ```
@@ -61,21 +63,21 @@ ruby 3.3.8 (2025-04-09 revision b200bad6cd) [x64-mingw-ucrt]
 
 # chirpy 초기화
 Git repository 를 clone 했던 폴더 위치에서 git bash 를 연다.
-```
-tools/init.sh
+```shell
+> tools/init.sh
 ```
 를 입력하여 아래 파일들을 삭제하고 초기화 하여준다.
 - .travis.yml
 - _posts 폴더 하위의 파일들
 - docs 폴더
 
-```
+```shell
 > bundle
 ```
 페이지를 구성하는 데 필요한 모듈들을 설치합니다.
 로컬에서도 실행이 가능해집니다.
-```
-jekyll serve
+```shell
+> jekyll serve
 ```
 를 입력한 후 http://127.0.0.1:4000 에 접속하면 블로그를 볼 수 있습니다.
 실행을 마쳤다면 Ctrl +  C 를 눌러 종료합니다.
@@ -91,18 +93,18 @@ url:"username.github.io" 로 변경합니다.
 git bash 에서 add, commit, push 를 진행합니다.
 
 수정하거나 새로 추가된 모든 파일을 추가 하는 작업
-```
-git add .
+```shell
+> git add .
 ```
 
 커밋을 진행하는 작업
-```
-git commit -m 'first commit'
+```shell
+> git commit -m 'first commit'
 ```
 
 푸시를 진행하는 작업
-```
-git push -u origin +master
+```shell
+> git push -u origin +master
 ```
 
 이후 git repository 에 Setting - Pages 에서 Visist site 로 방문하면 내가 만든 Github Blog 에 접속 가능!
@@ -120,6 +122,8 @@ $ git commit -m 'first post'
 husky - commit-msg script failed (code 1)
 ```
 
+```shell
 > rm .husky/commit-msg
+```
 
 명령어로 커밋 메세지 검사를 비활성화할 수 있다.
