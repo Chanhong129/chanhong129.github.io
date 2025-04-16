@@ -4,7 +4,7 @@ Github blog 를 만들면서 겪은 시행착오를 정리하고, 처음부터 �
 # 테마 쇼핑하기
 Github Blog 를 제작하기 위해서 첫 번째로 해야 할일은 블로그 테마를 고르는 일이었다. 
 
-[http://jekyllthemes.org/](http://jekyllthemes.org/) 에 들어가면 여러가지 블로그 테마를 구경할 수 있다. 
+http://jekyllthemes.org/ 에 들어가면 여러가지 블로그 테마를 구경할 수 있다. 
 
 ![jekyll themes](https://i.ibb.co/jvmZYYgH/image.png)
 
