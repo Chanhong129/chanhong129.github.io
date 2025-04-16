@@ -13,7 +13,7 @@ http://jekyllthemes.org/ 에 들어가면 여러가지 블로그 테마를 구�
 # Fork 하기
 **\* Fork 를 하기 위해선 github 에 가입을 해야한다.**
 
-![Chirpy](https://ibb.co/CfMgMM1)
+![Chirpy](https://i.ibb.co/8HdqddK/image.png)
 Hompage 를 클릭하면 jekyll-hteme-chirpy github page 로 들어가지는데 여기서 fork 를 진행한다.
 
 fork 는 우리가 아는 식사를 할 때 사용하는 그 포크를 말하는 것인데
