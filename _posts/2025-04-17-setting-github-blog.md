@@ -1,4 +1,17 @@
-# 기본 설정
+---
+title: Github Blog 기본 설정 (Chirpy)
+date: 2025-04-17 11:15:33 +0900
+categories: [Github, Blog]
+tags: [github, blog, chirpy]
+description: jekyll, chirpy, github, blog
+#image:
+#  src: https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/1200px-Markdown-mark.svg.png
+#  width: 1000   # in pixels
+#  height: 400   # in pixels
+#  alt: image alternative text
+---
+
+## 기본 설정
 ```yaml
 # The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
 lang: ko-KR   # 상단 주소 확인
@@ -19,7 +32,7 @@ social:
   email: Chanhongv@gmail.com # 본인 이메일 주소, 좌하단 링크 정보에서 사용됨
 ```
 
-# 좌하단 링크 정보들 변경
+## 좌하단 링크 정보들 변경
 ```yaml
 # _data/contact.yml
 - type: tistory
@@ -47,7 +60,7 @@ for entry in site.data.contact
                 <!-- site ==> _config.yml  //  entry.type ==> tistory, github 등등 -->
 ```
 
-# 좌상단 아바타 이미지 변경
+## 좌상단 아바타 이미지 변경
 ```yaml
 #_config.yml
 avatar: /assets/img/MorningBBAng.png  # 원하는 Local, CDN 등등의 주소로 설정하면 된다.
