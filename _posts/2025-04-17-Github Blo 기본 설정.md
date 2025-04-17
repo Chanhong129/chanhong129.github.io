@@ -30,13 +30,13 @@ social:
 tistory:
   url: https://ifeeligood.tistory.com/
 ```
-```html
+```
 <!-- includes/sidebar.html -->
 <!-- 내용 추가 -->
 {% when 'tistory' %}
-  [Tistory 블로그 바로가기]({{ site.tistory.url }})
-{% endwhen %}
-
+	{% capture url %}
+		{{ site.tistory.url }}
+			{% endcapture %}
 ```
 
 # 좌상단 아바타 이미지 변경
