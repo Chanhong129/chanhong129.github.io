@@ -30,13 +30,21 @@ social:
 tistory:
   url: https://ifeeligood.tistory.com/
 ```
-```
+
+```html
 <!-- includes/sidebar.html -->
-<!-- 내용 추가 -->
-{% when 'tistory' %}
-	{% capture url %}
-		{{ site.tistory.url }}
-			{% endcapture %}
+<!-- 태그 정확하지 않음. 정확한 코드는 직접 확인할 것. -->
+for entry in site.data.contact
+    case entry.type
+        when 'github', 'twitter'
+            capture url
+                https://.com/
+            endcapture
+        <!-- 이런식으로 추가 -->
+        when 'tistory'
+            capture url
+                site[entry.type].url
+                <!-- site ==> _config.yml  //  entry.type ==> tistory, github 등등 -->
 ```
 
 # 좌상단 아바타 이미지 변경
