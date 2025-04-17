@@ -22,25 +22,25 @@ mermaid: true
 ## 테마 쇼핑하기
 Github Blog 를 제작하기 위해서 첫 번째로 해야 할일은 블로그 테마를 고르는 일이었다. 
 
-http://jekyllthemes.org/ 에 들어가면 여러가지 블로그 테마를 구경할 수 있다. 
+**http://jekyllthemes.org/** 에 들어가면 여러가지 블로그 테마를 구경할 수 있다. 
 
 ![jekyll themes](https://i.ibb.co/jvmZYYgH/image.png)
 
 다양한 스타일이 있어서 고르는 재미가 쏠쏠했다.
 
-그 중에서 나는 Chirpy 테마가 가장 마음에 들어서 선택했다.
+그 중에서 나는 **Chirpy** 테마가 가장 마음에 들어서 선택했다.
 
 ## Fork 하기
 **\* Fork 를 하기 위해선 github 에 가입이 되어있어야 한다.**
 
 원하는 테마를 클릭하여 들어가면 아래와 같은 화면이 나오는데
 ![Chirpy](https://i.ibb.co/8HdqddK/image.png)
-여기서 Homepage 버튼을 클릭하여 jekyll-hteme-chirpy github page 로 들어가 Repository 를 fork 할 수 있다.
+여기서 **Homepage** 버튼을 클릭하여 jekyll-hteme-chirpy github page 로 들어가 Repository 를 **fork** 할 수 있다.
 
 > fork 는 우리가 아는 식사를 할 때 사용하는 그 포크를 말하는 것인데
 > 케이크를 접시에 옮겨 담듯, 코드를 내공간으로 가져오는 것을 포크(Fork)라고 한다.
 
-Fork 를 누르고 Repository name 을 username/username.github.io 로 변경하여 create fork 를 한다.
+Fork 를 누르고 Repository name 을 **username/username.github.io** 로 변경하여 create fork 를 한다.
 필자의 경우 chanhong129/chanhong129.github.io
 
 혹시 이름을 변경하지 않고 Fork 했더라도 나의 Repository 에서 포크한 프로젝트를 선택하고 Setting - General 에 들어가 이름을 변경할 수 있다.
@@ -52,6 +52,7 @@ Git 은 [https://git-scm.com/](https://git-scm.com/) 에서 설치 할 수 있�
 Github 의 chanhong129.github.io Repository 에서 code 를 눌러 url 을 copy 한다.
 윈도우에서 원하는 폴더 위치에서 우클릭 후 git bash here 을 하여
 git clone 을 치고 붙여넣기 하여 코드를 복사한다.
+
 ```git
 git clone (복붙한 url 내용)
 ```
@@ -97,7 +98,7 @@ Git repository 를 clone 했던 폴더 위치에서 git bash 를 연다.
 ```shell
 > jekyll serve
 ```
-를 입력한 후 http://127.0.0.1:4000 에 접속하면 블로그를 볼 수 있습니다.
+를 입력한 후 **http://127.0.0.1:4000** 에 접속하면 블로그를 볼 수 있습니다.
 실행을 마쳤다면 Ctrl +  C 를 눌러 종료합니다.
 
 ## URL 설정하기
