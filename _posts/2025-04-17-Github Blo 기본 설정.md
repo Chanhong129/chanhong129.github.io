@@ -34,9 +34,9 @@ tistory:
 <!-- includes/sidebar.html -->
 <!-- 내용 추가 -->
 {% when 'tistory' %}
-	{% capture url %}
-		{{ site.tistory.url }}
-			{% endcapture %}
+  [Tistory 블로그 바로가기]({{ site.tistory.url }})
+{% endwhen %}
+
 ```
 
 # 좌상단 아바타 이미지 변경
