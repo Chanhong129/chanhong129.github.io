@@ -58,7 +58,7 @@ Chirpy 에서는 내부적으로 목차를 지원 하고 있어서
 으로 작성하면 목차가 자동으로 생성된다.
 
 ## 배포하기
-[Github Blog 만들기 (Chirpy)](https://www.irgroup.org/posts/2025-04-16-create-github-blog/) 포스트에서 Git add, commit, push 를 사용한 것을 이용하면 된다.
+[Github Blog 만들기 (Chirpy)](https://chanhong129.github.io/posts/2025-04-16-create-github-blog/) 포스트에서 Git add, commit, push 를 사용한 것을 이용하면 된다.
 
 수정하거나 새로 추가된 모든 파일을 추가 하는 작업
 ```shell
