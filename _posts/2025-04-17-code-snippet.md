@@ -21,7 +21,7 @@ description: code snippet
 
 **prop** 을 입력하고 Tab, Tab 을 누르면
 
-```C#
+```cs
 public int MyProperty { get; set; }
 ```
 이 자동 완성되고 **Type** 이나 **변수명** 을 탭을 이용하여 이동하며 변경할 수 있다.
@@ -30,7 +30,7 @@ public int MyProperty { get; set; }
 
 **propf** 을 입력하고 Tab, Tab 을 누르면
 
-```C#
+```cs
    private int myVar;
    
    public int MyProperty
