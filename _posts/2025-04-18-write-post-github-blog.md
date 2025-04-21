@@ -11,6 +11,8 @@ description: jekyll, chirpy, github, blog
 #  alt: image alternative text
 ---
 
+> 블로그를 만들었다면 포스트를 작성해야겠지? (광역 도발)
+
 ## Post 작성하기
 **_post** 폴더에 **yyyy-mm-dd-title.md** 로 파일을 만들면 포스트 작성이 가능하다. 파일은 형식에 맞게 만들어야 한다.
 > yyyy-mm-dd-title.md
@@ -93,3 +95,5 @@ Git Actions 에서 내가 Commit 한 제목이 업로드 되었는지 확인 하
 **미리 로컬에서 확인하고 업로드 하는 것도 편하다.**
 
 **Repository 에서 git bash 를 열고 jekyll serve 를 입력한 후 127.0.0.1:4000 사이트에서 확인 할 수 있다.**
+
+> 포스트를 자주 작성하자 !!!

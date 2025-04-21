@@ -10,7 +10,7 @@ description: code snippet
 #  height: 400   # in pixels
 #  alt: image alternative text
 ---
-> 간단한 Code snippet 사용법에 대해 알아본다.
+> 몇 글자로 코드 완성하는 기능이 있다. 그걸 **"코드 조각"** 이라고 부르기로 했어요.
 
 ## Code snippet 이란?
 **코드 조각**이라고 불리는 Code snippet 은 간단한 키워드로 코드를 만들어 내는 기능이다. Visual Studio 에서도 기본적 으로 제공해주는 코드조각들이 있다.
@@ -94,4 +94,4 @@ public partial $type$ $name$ { get; set; }$end$
 ![코드조각 사용1](https://i.ibb.co/HLXx1hjW/image.png)
 ![코드조각 사용2](https://i.ibb.co/CsJtFfLr/image.png)
 
-손가락 피로도가 줄어들 것 같다
+> 내 손가락아, 더 많은 코드를 작성할 수 있겠지...? 응?

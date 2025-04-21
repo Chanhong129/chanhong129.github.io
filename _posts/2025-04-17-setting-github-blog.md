@@ -11,6 +11,8 @@ description: jekyll, chirpy, github, blog
 #  alt: image alternative text
 ---
 
+> Github Blog 를 개설하려면 설정해야 하는 것들
+
 ## 기본 설정
 ```yaml
 # The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
@@ -21,10 +23,10 @@ timezone: Asia/Seoul  # 상단 주소 확인
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 title: Till The End Dev # 좌상단 아바타 밑에 큰 글씨
-tagline: 모닝빵의 개발 블로그 # title 밑에 글씨
+tagline: 집중!!! # title 밑에 글씨
 description: >- # 검색어를 위한 설정
   TillTheEnd.Dev
-url: "https://ToasT1ng.github.io"  # 본인 Git 블로그 주소에 맞게 변경
+url: "https://chanhong129.github.io"  # 본인 Git 블로그 주소에 맞게 변경
 github:
   username: Chanhong129 # 본인 github 이름, 좌하단 링크 정보에서 사용됨
 social:
@@ -65,3 +67,8 @@ for entry in site.data.contact
 #_config.yml
 avatar: /assets/img/MorningBBAng.png  # 원하는 Local, CDN 등등의 주소로 설정하면 된다.
 ```
+
+> [Github blog 만들기 포스트](https://chanhong129.github.io/posts/create-github-blog/) 에 이어 이 포스트를 따라했다면
+> Git Add, Commit, Push 후 내가 설정한 URL 로 접속이 가능하다.
+> 이렇게 쉽게 나만의 블로그를 배포 가능 !
+> 도메인만 구매한다면 더 다양하게 사용 가능할 거 같다.
