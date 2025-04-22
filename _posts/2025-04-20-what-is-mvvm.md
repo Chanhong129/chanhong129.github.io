@@ -1,7 +1,7 @@
 ---
-title: WPF 에서 사용하는 MVVM (Community Toolkit)
+title: MVVM 패턴이란?
 date: 2025-04-20 10:00:00 +0900
-categories: [Programming, WPF]
+categories: [Programming, MVVM]
 tags: [wpf, mvvm, communitytoolkit]
 description: CommunityToolkit.Mvvm
 #image:
@@ -23,9 +23,10 @@ description: CommunityToolkit.Mvvm
 |ViewModel|View 와 Model 을 연결하는 중간다리. 데이터 바인딩, 커맨트 처리 등을 맡음.|
 
 ## 왜 MVVM을 쓰냐?
+
 |이유|설명|
 |--|--|
-|코드 깔끔|UI 코드와 로직 코드가 분리되어 유지보수가 쉬워짐
+|코드 깔끔|UI 코드와 로직 코드가 분리되어 유지보수가 쉬워짐|
 |테스트 용이|ViewModel 은 UI 없이 단독 테스트 가능|
 |재사용성|ViewModel 은 여러 View 에서 재사용 가능|
 |생산성 향상|바인딩만 설정하면, 값 변경이 UI에 자동 반영|
@@ -44,12 +45,13 @@ C# 은 Nuget Pacakge 가 정말 편리한데, 역시 MVVM 패턴을 편리하게
 **CommunityToolkit.Mvvm** 은 마이크로소프트 공식 라이브러리 라서 믿고 사용한다.
 
 주요 기능:
+
 |기능|설명|
 |--|--|
-|```ObservableObject```|````INotifyPropertyChanged``` 를 자동 처리|
+|```ObservableObject```|```INotifyPropertyChanged``` 를 자동 처리|
 |```[ObservableProperty]```|필드만 만들면 자동으로 프로퍼티 생성|
 |```RelayCommand```|커맨들 만들 때 ICommand 직접 구현 필요 없음|
 |```ObservableValidator```|Validation (유효성 검사) 지원)|
 |Dependency Injection 지원|ViewModel 생성자 주입을 간편하게 처리|
 
-> 그래서 Community Toolkit MVVM 이 뭐라고...?
+> 그래서 MVVM 패턴이 뭐라고...? 😥
