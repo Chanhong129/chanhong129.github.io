@@ -227,3 +227,6 @@ jekyll-archives:
 
 tistory:
   url: https://ifeeligood.tistory.com/
+
+plugins:
+  - jekyll-sitemap

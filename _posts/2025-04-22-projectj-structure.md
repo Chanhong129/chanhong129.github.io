@@ -43,7 +43,7 @@ lot4net 을 사용하여 애플리케이션 로깅 기능을 담당합니다.
 공통 유틸리티, 헬퍼 메서드 등을 제공하는 지원 모듈.
 Custom Control 을 사용하여 원하는 UI Control 을 제공함
 ### Test
-- **Simuliator**
+- **Simulator**
 테스트 및 시뮬레이션을 위한 도구 모듈
 
 ## 요약
