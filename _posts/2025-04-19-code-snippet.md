@@ -2,8 +2,8 @@
 title: Code Snippet 작성하기
 date: 2025-04-19 10:00:00 +0900
 categories: [Programming, Visual Studio]
-tags: [code snippet, visual studio]
-description: code snippet
+tags: [c#, code snippet, visual studio]
+description: Code snippet
 #image:
 #  src: https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/1200px-Markdown-mark.svg.png
 #  width: 1000   # in pixels

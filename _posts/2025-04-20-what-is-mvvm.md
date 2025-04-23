@@ -2,7 +2,7 @@
 title: MVVM 패턴이란?
 date: 2025-04-20 10:00:00 +0900
 categories: [Programming, MVVM]
-tags: [wpf, mvvm, communitytoolkit]
+tags: [c#, wpf, mvvm, communitytoolkit]
 description: CommunityToolkit.Mvvm
 #image:
 #  src: https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/1200px-Markdown-mark.svg.png

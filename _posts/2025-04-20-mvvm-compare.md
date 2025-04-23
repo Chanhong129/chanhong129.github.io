@@ -2,7 +2,7 @@
 title: 그래서 MVVM 패턴이 뭔데? (Winform vs WPF)
 date: 2025-04-20 15:00:00 +0900
 categories: [Programming, MVVM]
-tags: [wpf, mvvm]
+tags: [c#, wpf, mvvm]
 description: CommunityToolkit.Mvvm
 #image:
 #  src: https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/1200px-Markdown-mark.svg.png
