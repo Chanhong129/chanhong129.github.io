@@ -36,11 +36,11 @@ private void button1_Click(object sender, EventArgs e)
         Width="150" Height="100"/>
 ```
 
-버튼을 더블 클릭하면 Winform 과 똑같아진다.
+버튼을 더블 클릭하면 Winform 과 똑같아진다.   
+
 그러면 **MVVM** 패턴은 어떻게 사용하는가?
 
-버튼 클릭 이벤트를 받으려면 Button 의 Command 라는 속성을 이용 해야 한다.
-
+버튼 클릭 이벤트를 받으려면 Button 의 Command 라는 속성을 이용 해야 한다.   
 Command 를 사용하기 위해서는 ICommand 를 상속받는 클래스 구현이 필요하다.
 ```cs
 public class RelayCommand : ICommand

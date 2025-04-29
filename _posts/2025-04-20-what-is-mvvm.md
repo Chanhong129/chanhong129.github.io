@@ -36,7 +36,7 @@ description: CommunityToolkit.Mvvm
 MVVM 패턴 자체는 좋은 구조지만, 직접 구현하면 반복 작업이 많다.
 - ```INotifyPropertyChanged``` 매번 수동으로 작성해야함
 - 커맨드(ICommand)도 매번 새로 만들어야 함
-- ViewModel 생성자에 Depedency Injection 을 붙일 때 코드가 복잡해짐
+- ViewModel 생성자에 Depedency Injection 을 붙일 때 코드가 복잡해짐   
 **=> 매번 똑같은 코드 반복, 귀찮고 실수하기 쉬움**
 
 ## Community Tookit 은 이걸 "자동화" 해줌
