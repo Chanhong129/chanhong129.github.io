@@ -72,7 +72,7 @@ ruby 3.3.8 (2025-04-09 revision b200bad6cd) [x64-mingw-ucrt]
 다음으로는 jekyll 와 bundler 를 설치합니다.
 ```shell
 > gem install jekyll
-> gen install bundler
+> gem install bundler
 ```
 ```shell
 > jekyll -v
