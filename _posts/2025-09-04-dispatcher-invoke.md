@@ -10,7 +10,7 @@ tags: [c#, wpf, Dispatcher, invoke, invokeAsync]
 #  height: 400   # in pixels
 #  alt: image alternative text
 ---
-# WPF Dispatcher: `Invoke` vs `InvokeAsync` 완전정복
+# WPF Dispatcher: `Invoke` vs `InvokeAsync`
 
 WPF에선 **UI 요소를 만든 스레드(UI 스레드)**만 그 요소를 만질 수 있습니다.  
 백그라운드 스레드에서 UI를 건드리려면 **Dispatcher**를 통해 **UI 스레드 큐에 작업을 등록(마샬링)**해야 해요.  
@@ -18,7 +18,7 @@ WPF에선 **UI 요소를 만든 스레드(UI 스레드)**만 그 요소를 만�
 
 ---
 
-## TL;DR
+## 쉽게 이해하기
 
 - **`Invoke`**: 동기 호출. *“지금 당장 처리해, 난 여기서 기다릴게.”* → 호출 스레드 **블록**. UI가 바쁘면 **기다림**.  
 - **`InvokeAsync`**: 비동기 호출. *“메모 남겼어, 시간 날 때 처리해.”* → **즉시 반환**, 필요하면 `await`.  
@@ -26,7 +26,7 @@ WPF에선 **UI 요소를 만든 스레드(UI 스레드)**만 그 요소를 만�
 
 ---
 
-## Dispatcher는 무엇? (초간단)
+## Dispatcher 란?
 
 - 스레드마다 0~1개의 Dispatcher가 있으며, **UI 스레드의 Dispatcher**가 화면 작업을 처리합니다.
 - 외부(백그라운드)에서 UI를 만지려면 **작업을 Dispatcher 큐에 넣고**, UI 스레드가 한가해질 때 **꺼내 실행**합니다.
@@ -36,23 +36,23 @@ WPF에선 **UI 요소를 만든 스레드(UI 스레드)**만 그 요소를 만�
 
 ---
 
-## 실행 시점, 정말 쉽게
+## 실행 시점
 
-### `InvokeAsync` (권장)
+### `InvokeAsync`
 1. 백그라운드에서 `InvokeAsync` 호출 → **큐에 등록**되고 **즉시 반환**.  
 2. UI 스레드가 현재 일을 마치고 펌프로 복귀하면, **우선순위**대로 작업 실행.  
 3. `DispatcherOperation.Task`를 `await`하면 **예외/결과/취소**를 관찰 가능.
 
-### `Invoke` (신중)
+### `Invoke`
 1. 백그라운드에서 `Invoke` 호출 → **자신(호출자)이 블록**.  
 2. UI 스레드가 펌프로 복귀해야 실행됨. UI가 바쁘면 **계속 대기**.  
 3. 실행이 끝나야 호출자가 풀림 → **교착/프리징 위험**.
 
 ---
 
-## `Invoke` : 언제, 어떻게
+## `Invoke`
 
-### 시그니처(대표)
+### 선언부
 ```csharp
 void Dispatcher.Invoke(Action callback);
 T    Dispatcher.Invoke<T>(Func<T> callback);
@@ -64,7 +64,7 @@ void Dispatcher.Invoke(Action, DispatcherPriority, TimeSpan timeout);
 - **UI 스레드에서 `Invoke`를 호출**하면 **즉시 인라인 실행**(큐에 안 넣고 바로 실행).
 - **예외**는 호출 스레드로 **직접 전파**.
 
-### 예시
+### 사용 예시
 ```csharp
 Application.Current.Dispatcher.Invoke(() =>
 {
@@ -76,9 +76,9 @@ Application.Current.Dispatcher.Invoke(() =>
 
 ---
 
-## `InvokeAsync` : 표준 패턴
+## `InvokeAsync`
 
-### 시그니처(대표)
+### 선언부
 ```csharp
 DispatcherOperation InvokeAsync(Action callback);
 DispatcherOperation InvokeAsync(Action, DispatcherPriority, CancellationToken);
@@ -90,7 +90,7 @@ DispatcherOperation<TResult> InvokeAsync<TResult>(Func<TResult> callback);
 - 반환값은 `DispatcherOperation` → `await op.Task`로 **예외/결과/취소** 확인 가능.
 - **취소 토큰**을 받아 아직 실행 전이면 취소 가능.
 
-### 예시 (값 반환/예외 처리)
+### 예시
 ```csharp
 try
 {
@@ -139,7 +139,7 @@ catch (TaskCanceledException) { /* 취소됨 */ }
 
 ## 실전 패턴
 
-### 1) 무거운 일은 백그라운드, UI는 마지막에만
+### 1) 무거운 일은 백그라운드, UI는 마지막에만 업데이트
 ```csharp
 var result = await Task.Run(DoHeavyWork); // CPU/IO 무거움은 백그라운드
 
@@ -150,7 +150,7 @@ await Application.Current.Dispatcher.InvokeAsync(() =>
 });
 ```
 
-### 2) 렌더 직전에 배치(배칭)하고 재진입 막기
+### 2) 렌더 직전에 배치하고 재진입 막기
 ```csharp
 await Application.Current.Dispatcher.InvokeAsync(() =>
 {
@@ -237,6 +237,4 @@ await Application.Current.Dispatcher.InvokeAsync(() =>
 }, DispatcherPriority.Render);
 ```
 
----
 
-필요하시면 이 글을 **PDF / DOCX**로도 변환해 드립니다. 또한, 프로젝트 구조(MVVM, CommunityToolkit.Mvvm)에 맞춘 **템플릿 코드** 버전도 제공 가능해요.
