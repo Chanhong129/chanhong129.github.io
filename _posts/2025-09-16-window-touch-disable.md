@@ -1,6 +1,6 @@
 ---
 title: 윈도우 환경 사용하는 터치 모니터의 제스처 끄기 + WPF 고무줄(바운스) 제거
-date: 2025-09-04 08:00:00 +0900
+date: 2025-09-16 08:00:00 +0900
 categories: [Windows, Etc]
 tags: [windows, touch, wpf, manipulation, boundary]
 
