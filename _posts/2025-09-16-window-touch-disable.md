@@ -25,7 +25,7 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\EdgeUI" /v AllowEdgeSwipe /t R
 
  - `AllowEdgeSwipe = 0` → 모든 엣지 스와이프 비활성화 (좌/우/상/하). 적용 후 로그오프 또는 재부팅 권장
  
- ### (선택) 현재 사용자만
+### (선택) 현재 사용자만
  
  ```bat
 reg add "HKCU\SOFTWARE\Policies\Microsoft\Windows\EdgeUI" /v AllowEdgeSwipe /t REG_DWORD /d 0 /f
@@ -33,15 +33,15 @@ reg add "HKCU\SOFTWARE\Policies\Microsoft\Windows\EdgeUI" /v AllowEdgeSwipe /t R
 
  - 여러 계정이 있는 장비에서는 보통 HKLM 쪽(전체적용)을 권장.
  
- ### (주의)
+### (주의)
   - **정밀 터치패드 3/4 손가락 제스처**는 장치/드라이버(Precision Touchpad) 영역이라 **단일 표준 레스트리**가 없습니다.
   조직 배포는 보통 **설정(GUI) 비활성** 또는 OEM 유틸/그룹정책/MDM 으로 처리합니다. (예: 설정 → 블루투스 및 장치 → 터치패드/터치 → 3:4손가락 제스처 끄기)
   - 모든 제스처를 절대적으로 막아야 한다면, 최후 수단으로 **HID-compliant Touch Screen 비활성**(장치 관리자)도 고려할 수 있으나, 이는 터치 자체를 끄므로 권장하지 않습니다.
   
-  ## 2. WPF 에서 스크롤 고무줄(끝에서 창 들썩임, 흔들림) 제거
+## 2. WPF 에서 스크롤 고무줄(끝에서 창 들썩임, 흔들림) 제거
   WPF 의 터치 스크롤은 끝에 닿을 떄 `ManipulationBoudnaryFeedback` 이벤트로 바운스 피드백을 발생시킵니다. 이를 **앱 전역에서 최사우이로 가로채서** 막으면 깔끔히 해결됩니다.
   
-  ### App.xaml.cs (전역 한 방 처리 - 권장)
+### App.xaml.cs (전역 한 방 처리 - 권장)
   
 ```csharp
   using System.Windows;
@@ -66,5 +66,5 @@ public partial class App : Application
 
 ## 요약
 
-[x] **레지스트리**: `HKLM\SOFTWARE\Policies\Microsoft\Windows\EdgeUI\AllowEdgeSwipe = 0` (가장자리 스와이프 전부 차단)
-[x] **WPF 전역 바운스 제거**: `EventManager.RegisterClassHandler(... ManipulationBoundaryFeedback ..., handledEventsToo:true)`
+- [x] **레지스트리**: `HKLM\SOFTWARE\Policies\Microsoft\Windows\EdgeUI\AllowEdgeSwipe = 0` (가장자리 스와이프 전부 차단)
+- [x] **WPF 전역 바운스 제거**: `EventManager.RegisterClassHandler(... ManipulationBoundaryFeedback ..., handledEventsToo:true)`
