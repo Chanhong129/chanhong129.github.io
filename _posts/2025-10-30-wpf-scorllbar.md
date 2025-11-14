@@ -1,7 +1,7 @@
 ---
 title: WPF 에서 Scrollbar 꾸미기
 date: 2025-10-30 13:00:00 +0900
-categories: [Windows, Etc]
+categories: [Programming, WPF]
 tags: [wpf, scrollbar, style]
 
 #image:
